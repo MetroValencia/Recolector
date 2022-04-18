@@ -1,0 +1,26 @@
+service: MetroValencia
+frameworkVersion: '3'
+
+app: metrovalencia
+
+provider:
+    name: aws
+    runtime: nodejs14.x
+
+    region: eu-west-3
+    stage: production
+
+package:
+    patterns:
+        - node_modules/**
+        - package-lock.json
+        - package.json
+        - index.js
+
+functions:
+    data:
+        handler: index.getJson
+        events:
+            - httpApi:
+                  path: /
+                  method: get

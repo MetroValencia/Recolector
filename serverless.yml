@@ -2,12 +2,13 @@ service: MetroValencia
 frameworkVersion: '3'
 
 app: metrovalencia
+org: emanuel20c
 
 provider:
     name: aws
-    runtime: nodejs14.x
-
-    region: eu-west-3
+    runtime: nodejs16.x
+    region: eu-central-1
+    architecture: arm64 # Hay que mirar que regiones la incluyen si no se incluye, comentar esta linea
     stage: production
 
 package:
@@ -16,11 +17,19 @@ package:
         - package-lock.json
         - package.json
         - index.js
+        - Javascript/**
+        - LICENSE
 
 functions:
-    data:
-        handler: index.getJson
+    getData:
+        handler: index.getData
         events:
             - httpApi:
                   path: /
+                  method: get
+    getAllData:
+        handler: index.getAll
+        events:
+            - httpApi:
+                  path: /all
                   method: get

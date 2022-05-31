@@ -1,0 +1,23 @@
+name: Dependabot auto-merge
+on: pull_request_target
+
+permissions:
+    pull-requests: write
+    contents: write
+
+jobs:
+    dependabot:
+        runs-on: ubuntu-latest
+        if: ${{ github.event.pull_request.user.login == 'dependabot[bot]' }}
+        steps:
+            - name: Dependabot metadata
+              id: dependabot-metadata
+              uses: dependabot/fetch-metadata@v1.3.1
+              with:
+                  compat-lookup: true
+                  github-token: '${{ secrets.GITHUB_TOKEN }}'
+            - name: Auto-merge
+              run: gh pr merge --auto --merge "$PR_URL" --add-label "production"
+              env:
+                  PR_URL: ${{github.event.pull_request.html_url}}
+                  GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

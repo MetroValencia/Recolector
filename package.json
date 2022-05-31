@@ -1,6 +1,6 @@
 {
 	"name": "recolector-metrovalencia",
-	"version": "2.0.0",
+	"version": "2.1.0",
 	"description": "API que entrega datos de MetroValencia",
 	"author": {
 		"name": "Emanuel Ciotoi",
@@ -9,12 +9,12 @@
 	"main": "index.js",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Emanuel-21-22/metrovalencia-json.git"
+		"url": "git+https://github.com/MetroValencia/Recolector.git"
 	},
 	"bugs": {
-		"url": "https://github.com/Emanuel-21-22/metrovalencia-json/issues"
+		"url": "https://github.com/MetroValencia/Recolector/issues"
 	},
-	"homepage": "https://github.com/Emanuel-21-22/metrovalencia-json#readme",
+	"homepage": "https://github.com/MetroValencia/Recolector#readme",
 	"license": "EUPL-1.2",
 	"keywords": [
 		"MetroValencia",

@@ -4,13 +4,18 @@ This log is intended to keep track of backwards-incompatible changes, including
 but not limited to API changes and file location changes. Minor behavioral
 changes may not be included if they are not expected to break existing code.
 
+## v2.1.0
+
+- Se llamaba la antigua función ~~getJson~~, en vez de **getData** en la función **_getAll_**
+- Carácter sin funcionalidad eliminado
+
 ## v2.0.0
 
 - Las funciones se han separado en archivos
 - Las funciones principales trabajan de forma más ágil
 - Despliegue automático mediante GitHub Actions
 - Actualización de la dependencias con Dependabot y GitHub Actions
-- La función de _**scraping**_ se ha generalizado para trabajar con los siguientes
+- La función de **_scraping_** se ha generalizado para trabajar con los siguientes
  tipos de dato que se solicitan de los elementos HTML
   - Textos
   - Atributos

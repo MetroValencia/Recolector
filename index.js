@@ -51,7 +51,7 @@ async function getAll() {
 	try {
 		const DRED = (await scrapeDataUrl(Con.URLData, Con.selectorData)).toString();
 
-		const excel = JSON.parse(await getJson());
+		const excel = JSON.parse(await getData());
 
 		if (excel.ok) {
 			data = excel.data;

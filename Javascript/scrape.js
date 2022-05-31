@@ -49,7 +49,6 @@ function scrapeData(html, selector, type = '', attrElem = '') {
 		default:
 			return $(selector);
 	}
-	º;
 }
 
 module.exports = { scrapeData, scrapeDataUrl };

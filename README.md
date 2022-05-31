@@ -26,25 +26,25 @@ URL de todos los datos de FGV: [5yic5dar2a.execute-api.eu-central-1.amazonaws.co
 
 La estructura varía dependiendo que función se esta usando, si se llama a la URL de los _datos del Excel_ solo proporcionará **_data.doc_**, y _data.red_ no aparecerá.
 
-```json
-data: {
-  doc: {
-    date: Date, // Fecha de la última modificación del Excel
-    meses: [Array], // El primer array tiene el nombre de las columnas (en meses y acumulado)
-    acumulado: [Array]
+```jsonc
+"data": {
+  "doc": {
+    "date": "Date", // Fecha de la última modificación del Excel
+    "meses": "[Array]", // El primer array tiene el nombre de las columnas (en meses y acumulado)
+    "acumulado": "[Array]"
   },
-  red: {
-    generales: {
-      titulo: String, // Título de la tabla
-      tabla: String // Tabla de HTML sin los estilos de FGV
+  "red": {
+    "generales": {
+      "titulo": "String", // Título de la tabla
+      "tabla": "String" // Tabla de HTML sin los estilos de FGV
     },
-    linea: {
-      titulo: String,
-      tabla: String
+    "linea": {
+      "titulo": "String",
+      "tabla": "String"
     },
-    PM: {
-      titulo: String,
-      tabla: String
+    "PM": {
+      "titulo": "String",
+      "tabla": "String"
     }
   }
 }

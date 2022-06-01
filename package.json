@@ -1,6 +1,6 @@
 {
-	"name": "metrovalencia-json",
-	"version": "1.0.0",
+	"name": "recolector-metrovalencia",
+	"version": "1.0.1",
 	"description": "Aplicación que envía datos en formato JSON de MetroValencia",
 	"author": {
 		"name": "Emanuel Ciotoi",
@@ -9,12 +9,12 @@
 	"main": "index.js",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Emanuel-21-22/metrovalencia-json.git"
+		"url": "git+https://github.com/MetroValencia/Recolector/tree/v1"
 	},
 	"bugs": {
-		"url": "https://github.com/Emanuel-21-22/metrovalencia-json/issues"
+		"url": "https://github.com/MetroValencia/Recolector/issues"
 	},
-	"homepage": "https://github.com/Emanuel-21-22/metrovalencia-json#readme",
+	"homepage": "https://github.com/MetroValencia/Recolector/tree/v1#readme",
 	"license": "EUPL-1.2",
 	"keywords": [
 		"MetroValencia",
@@ -22,11 +22,11 @@
 		"MetroValencia JSON"
 	],
 	"devDependencies": {
-		"serverless": "^3.14.0"
+		"serverless": "^3.18.2"
 	},
 	"dependencies": {
-		"axios": "^0.26.1",
-		"cheerio": "^1.0.0-rc.10",
+		"axios": "^0.27.2",
+		"cheerio": "^1.0.0-rc.11",
 		"xlsx": "^0.18.5"
 	},
 	"scripts": {

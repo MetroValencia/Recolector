@@ -6,20 +6,24 @@ Se usará AWS Lambda para solicitar los datos, por la alta disponibilidad que ap
 
 Coge los datos de la web de FGV y los transforma de **_excel_** a **JSON** para un manejo más fácil.
 
-URL de datos del Excel: [5yic5dar2a.execute-api.eu-central-1.amazonaws.com](https://5yic5dar2a.execute-api.eu-central-1.amazonaws.com/)
+URL de datos del Excel: [r4tq2dl33k.execute-api.eu-west-1.amazonaws.com](https://r4tq2dl33k.execute-api.eu-west-1.amazonaws.com/)
 
-URL de todos los datos de FGV: [5yic5dar2a.execute-api.eu-central-1.amazonaws.com/all](https://5yic5dar2a.execute-api.eu-central-1.amazonaws.com/all)
+URL de todos los datos de FGV: [r4tq2dl33k.execute-api.eu-west-1.amazonaws.com/all](https://r4tq2dl33k.execute-api.eu-west-1.amazonaws.com/all)
 
 ## Requisitos de despliegue con AWS
 
 - Tener una cuenta de AWS
-- Crear credenciales en el IAM con los permisos mínimos para su despliegue o crear con permisos de Administrador
-  - IAMFullAccess
-  - AmazonS3FullAccess
-  - CloudWatchFullAccess
-  - AWSCloudFormationFullAccess
-  - AWSLambda_FullAccess
-  - AmazonAPIGatewayInvokeFullAccess
+- Crear credenciales en el IAM usando una de estas dos opciones
+  - Permisos mínimos
+    - AWSCloudFormationFullAccess
+    - AWSLambda_FullAccess
+    - AmazonAPIGatewayAdministrator
+    - AmazonEventBridgeFullAccess
+    - AmazonS3FullAccess
+    - CloudWatchFullAccess
+    - IAMFullAccess
+  - Permisos de Administrador
+    - AdministratorAccess
 - Almacenar la clave de la API del usuario de AWS y la clave secreta (mantenerla a salvo)
 
 ## Estructura de data

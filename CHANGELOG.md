@@ -8,6 +8,7 @@ changes may not be included if they are not expected to break existing code.
 
 - Se llamaba la antigua función ~~getJson~~, en vez de **getData** en la función **_getAll_**
 - Carácter sin funcionalidad eliminado
+- Ajustes de despliegue automático
 
 ## v2.0.0
 

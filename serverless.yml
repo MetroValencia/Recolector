@@ -1,13 +1,13 @@
 service: MetroValencia
 frameworkVersion: '3'
 
-app: metrovalencia
-org: emanuel20c
+# app: metrovalencia
+# org: emanuel20c
 
 provider:
     name: aws
     runtime: nodejs16.x
-    region: eu-central-1
+    region: eu-west-1
     architecture: arm64 # Hay que mirar que regiones la incluyen si no se incluye, comentar esta linea
     stage: production
 

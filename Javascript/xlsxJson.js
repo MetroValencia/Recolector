@@ -56,15 +56,25 @@ function wBtoJson(workBook) {
 /**
  * @param {JSON} json JSON sacado de los datos del Excel
  * @param {Array} titles Titulo de todos los campos
- * @returns Datos ordenados de menos a más años
+ * @returns Datos ordenados de menos a más años y cada linea muestra los pasajeros
+ * en otro array por cada mes
  */
 function structuredData(json, titles) {
-	const arr = [titles];
+	const arr = [];
+	const arr2 = [['Mes', 'Año', 'Linea', 'Pasajeros']];
 	const values = json.map(filterObject);
 
 	arr.push(...values.sort((a, b) => a[1] - b[1]));
 
-	return arr;
+	for (const i in arr) {
+		for (const j in arr[i]) {
+			if (j == 0 || j == 1) continue;
+
+			arr2.push([arr[i][0], arr[i][1], titles[j], arr[i][j]]);
+		}
+	}
+
+	return arr2;
 }
 
 /**

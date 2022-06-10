@@ -4,6 +4,12 @@ const { getDataExcel } = require('./Javascript/xlsxJson');
 const { scrapeDataUrl } = require('./Javascript/scrape');
 const { tableJson } = require('./Javascript/tableJson');
 
+const headers = {
+	'Access-Control-Allow-Origin': '*',
+	'Access-Control-Allow-Method': 'GET',
+	'Content-Type': 'application/vnd.api+json',
+};
+
 /**
  * Función principal para conseguir los datos de MetroValencia almacenado en el Excel
  * @returns Respuesta de datos en formato JSON
@@ -35,7 +41,7 @@ async function getData() {
 		data = 'Can not get data';
 	}
 
-	return JSON.stringify({ status, statusCode: status, ok, statusText, data });
+	return { headers, status, statusCode: status, ok, statusText, body: JSON.stringify(data) };
 }
 
 /**
@@ -51,10 +57,10 @@ async function getAll() {
 	try {
 		const DRED = (await scrapeDataUrl(Con.URLData, Con.selectorData)).toString();
 
-		const excel = JSON.parse(await getData());
+		const resp = await getData();
 
-		if (excel.ok) {
-			data = excel.data;
+		if (resp.ok) {
+			data = JSON.parse(resp.body);
 
 			data.red = tableJson(DRED);
 		} else throw new Error();
@@ -65,7 +71,7 @@ async function getAll() {
 		data = 'Can not get all data';
 	}
 
-	return JSON.stringify({ status, statusCode: status, ok, statusText, data });
+	return { headers, status, statusCode: status, ok, statusText, body: JSON.stringify(data) };
 }
 
 module.exports = { getData, getAll };

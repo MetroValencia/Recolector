@@ -10,6 +10,14 @@ provider:
     region: eu-west-1
     architecture: arm64 # Hay que mirar que regiones la incluyen si no se incluye, comentar esta linea
     stage: production
+    httpApi:
+        cors:
+            allowedOrigins:
+                - '*'
+            allowedMethods:
+                - GET
+            allowedHeaders:
+                - Content-Type
 
 package:
     patterns:

@@ -28,10 +28,12 @@ URL de todos los datos de FGV: [r4tq2dl33k.execute-api.eu-west-1.amazonaws.com/a
 
 ## Estructura de data
 
-La estructura varía dependiendo que función se esta usando, si se llama a la URL de los _datos del Excel_ solo proporcionará **_data.doc_**, y _data.red_ no aparecerá.
+La estructura varía dependiendo que función se esta usando, si se llama a la URL de los _datos del Excel_ solo proporcionará **_body.doc_**, y _body.red_ no aparecerá.
+
+### Estructura completa
 
 ```jsonc
-"data": {
+"body": {
   "doc": {
     "date": "Date", // Fecha de la última modificación del Excel
     "meses": "[Array]", // El primer array tiene el nombre de las columnas (en meses y acumulado)
@@ -53,6 +55,13 @@ La estructura varía dependiendo que función se esta usando, si se llama a la U
   }
 }
 ```
+
+- Muestra de datos de **_body > doc > meses_**:
+
+![image](https://user-images.githubusercontent.com/36056518/173154484-e7e2b672-a70c-475c-a0a1-b05d62c69161.png#gh-light-mode-only)
+![image](https://user-images.githubusercontent.com/36056518/173154260-dd6ff3f3-2e34-4ccd-ae8d-e3b800826acb.png#gh-dark-mode-only)
+
+- Tablas **_body > red_**:
 
 La tabla tiene dos clases incorporadas (metro y m*), **m\*** hace la distinción para aplicar un estilo concreto a esa tabla
 

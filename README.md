@@ -61,8 +61,8 @@ La estructura varía dependiendo que función se esta usando, si se llama a la U
 
 - Muestra de datos de **_body > doc > meses_**:
 
-![image](https://user-images.githubusercontent.com/36056518/173154484-e7e2b672-a70c-475c-a0a1-b05d62c69161.png#gh-light-mode-only)
-![image](https://user-images.githubusercontent.com/36056518/173154260-dd6ff3f3-2e34-4ccd-ae8d-e3b800826acb.png#gh-dark-mode-only)
+![image](https://user-images.githubusercontent.com/36056518/173192045-c3ce30e9-0e71-41dd-b04e-f5f7cd38e1a5.png#gh-light-mode-only)
+![image](https://user-images.githubusercontent.com/36056518/173192125-e7f087eb-1888-41d5-8049-2105a970546b.png#gh-dark-mode-only)
 
 - Tablas **_body > red_**:
 

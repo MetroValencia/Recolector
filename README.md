@@ -1,6 +1,7 @@
 # MetroValencia Recolector
 
 [![Deploy serverless app](https://github.com/MetroValencia/Recolector/actions/workflows/appDeploy.yml/badge.svg)](https://github.com/MetroValencia/Recolector/actions/workflows/appDeploy.yml)
+
 ___
 
 Esta es la aplicación encargada de recoger datos de Ferrocarriles de la Generalidad Valenciana (FGV en adelante).

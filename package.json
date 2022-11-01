@@ -22,7 +22,7 @@
 		"MetroValencia JSON"
 	],
 	"dependencies": {
-		"axios": "^0.27.2",
+		"axios": "^1.1.3",
 		"cheerio": "^1.0.0-rc.11",
 		"xlsx": "^0.18.5"
 	},
